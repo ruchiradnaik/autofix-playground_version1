@@ -36,10 +36,12 @@ def run():
     fetcher = DataFetcher()
     keys = ["alpha", "beta", "gamma", "alpha"]
 
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     result = loop.run_until_complete(fetcher.process(keys))
     print(result)
 
 
 if __name__ == "__main__":
     run()
+# CodeSentinal: created for you by RuchirAdnaik.
