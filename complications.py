@@ -29,7 +29,7 @@ class DataFetcher:
         for key, value in zip(keys, results):
             self.store(key, value)
 
-        return self._cache
+        return self._cache.copy()  # Return a copy of the cache
 
 
 def run():
@@ -43,3 +43,4 @@ def run():
 
 if __name__ == "__main__":
     run()
+# CodeSentinal: created for you by RuchirAdnaik.
